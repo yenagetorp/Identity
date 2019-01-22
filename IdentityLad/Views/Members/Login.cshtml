@@ -1,0 +1,27 @@
+﻿
+@{
+    Layout = null;
+}
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model IdentityLad.Models.ViewModels.MembersLoginVM
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css">
+</head>
+<body>
+    <h1>Log In</h1>
+    <form asp-controller="Members" asp-action="Login">
+        <label asp-for="UserName"></label>
+        <input asp-for="UserName" />
+        <span asp-validation-for="UserName"></span>
+        <label asp-for="PassWord"></label>
+        <input asp-for="PassWord" />
+        <br />
+        <input type="submit" value="Log In"/>
+    </form>
+</body>
+</html>
